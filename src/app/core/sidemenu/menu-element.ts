@@ -298,5 +298,144 @@ export const menus = [
                 'open': false,
             }
         ]
+    }, {
+        'name': 'Teachers',
+        'icon': 'account_circle',
+        'open': false,
+        'link': false,
+        'sub': [
+            {
+                'name': 'Add Teacher',
+                'icon': 'person_add',
+                'link': 'teachers/add-teacher',
+                'open': false,
+            },
+            {
+                'name': 'View Teachere',
+                'icon': 'how_to_reg',
+                'link': 'teachers/view-teacher',
+                'open': false,
+            },
+            {
+                'name': 'Teachers Attendance',
+                'icon': 'gesture',
+                'link': 'teachers/attedence-teacher',
+                'open': false,
+            },
+            {
+                'name': 'View Teachers Attendence',
+                'icon': 'ballot',
+                'link': 'teachers/view-teacher',
+                'open': false,
+            },
+            {
+                'name': 'Teacher Payments',
+                'icon': 'attach_money',
+                'link': 'teachers/teacher-payment',
+                'open': false,
+            }
+        ]
+    }, {
+        'name': 'Academics',
+        'icon': 'account_circle',
+        'open': false,
+        'link': false,
+        'sub': [
+            {
+                'name': 'Create Academic Year',
+                'icon': 'person_add',
+                'link': 'academics/create-academics-yr',
+                'open': false,
+            },
+            {
+                'name': 'Create Section',
+                'icon': 'how_to_reg',
+                'link': 'academics/view-teacher',
+                'open': false,
+            },
+            {
+                'name': 'Create Class',
+                'icon': 'gesture',
+                'link': 'academics/attedence-teacher',
+                'open': false,
+            },
+            {
+                'name': 'Limit Student in Class - Section',
+                'icon': 'ballot',
+                'link': 'academics/view-teacher',
+                'open': false,
+            },
+            {
+                'name': 'Create Subject',
+                'icon': 'attach_money',
+                'link': 'academics/teacher-payment',
+                'open': false,
+            },
+            {
+                'name': 'Create Category',
+                'icon': 'attach_money',
+                'link': 'academics/teacher-payment',
+                'open': false,
+            },
+            {
+                'name': 'Create Religion',
+                'icon': 'attach_money',
+                'link': 'academics/teacher-payment',
+                'open': false,
+            },
+            {
+                'name': 'Class Subject Assign',
+                'icon': 'attach_money',
+                'link': 'academics/teacher-payment',
+                'open': false,
+            },
+
+
+
+
+
+            {
+                'name': 'Class Teacher Allocation',
+                'icon': 'attach_money',
+                'link': 'academics/teacher-payment',
+                'open': false,
+            },
+            {
+                'name': 'Define Period',
+                'icon': 'attach_money',
+                'link': 'academics/teacher-payment',
+                'open': false,
+            },
+            {
+                'name': 'Create Class Timetable',
+                'icon': 'attach_money',
+                'link': 'academics/teacher-payment',
+                'open': false,
+            },
+            {
+                'name': 'View / Print Class Timetable',
+                'icon': 'attach_money',
+                'link': 'academics/teacher-payment',
+                'open': false,
+            },
+            {
+                'name': 'View Teacher Timetable',
+                'icon': 'attach_money',
+                'link': 'academics/teacher-payment',
+                'open': false,
+            },
+            {
+                'name': 'Create Circular / Notice / Information',
+                'icon': 'attach_money',
+                'link': 'academics/teacher-payment',
+                'open': false,
+            },
+            {
+                'name': 'Circular / Notice / Information-Search/Print',
+                'icon': 'attach_money',
+                'link': 'academics/teacher-payment',
+                'open': false,
+            }
+        ]
     }
 ];
