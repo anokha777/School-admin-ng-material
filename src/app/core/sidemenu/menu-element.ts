@@ -144,26 +144,26 @@ export const menus = [
             },
         ]
     },
-    // {
-    //     'name'   : 'Forms',
-    //     'icon'   : 'mode_edit',
-    //     'open'   : false,
-    //     'link'   : false,
-    //     'sub'    :  [
-    //                     {
-    //                         'name': 'Template Driven',
-    //                         'icon': 'mode_edit',
-    //                         'open'   : false,
-    //                         'link':'forms/template_forms'
-    //                     },
-    //                     {
-    //                         'name': 'Reactive Forms',
-    //                         'icon': 'text_fields',
-    //                         'open'   : false,
-    //                         'link':'forms/reactive_forms'
-    //                     }
-    //                 ]
-    // },
+    {
+        'name'   : 'Forms',
+        'icon'   : 'mode_edit',
+        'open'   : false,
+        'link'   : false,
+        'sub'    :  [
+                        {
+                            'name': 'Template Driven',
+                            'icon': 'mode_edit',
+                            'open'   : false,
+                            'link':'forms/template_forms'
+                        },
+                        {
+                            'name': 'Reactive Forms',
+                            'icon': 'text_fields',
+                            'open'   : false,
+                            'link':'forms/reactive_forms'
+                        }
+                    ]
+    },
     {
         'name': 'Tables',
         'icon': 'list',
@@ -299,6 +299,103 @@ export const menus = [
             }
         ]
     }, {
+        'name': 'Academics',
+        'icon': 'all_inbox',
+        'open': false,
+        'link': false,
+        'sub': [
+            {
+                'name': 'Create Academic Year',
+                'icon': 'today',
+                'link': 'academics/create-academics-yr',
+                'open': false,
+            },
+            {
+                'name': 'Create Section',
+                'icon': 'create',
+                'link': 'academics/create-section',
+                'open': false,
+            },
+            {
+                'name': 'Create Class',
+                'icon': 'call_split',
+                'link': 'academics/create-class',
+                'open': false,
+            },
+            {
+                'name': 'Limit Student in Class - Section',
+                'icon': 'pan_tool',
+                'link': 'academics/limit-section-student',
+                'open': false,
+            },
+            {
+                'name': 'Create Subject',
+                'icon': 'import_contacts',
+                'link': 'academics/create-subject',
+                'open': false,
+            },
+            {
+                'name': 'Create Category',
+                'icon': 'add_circle',
+                'link': 'academics/create-category',
+                'open': false,
+            },
+            {
+                'name': 'Create Religion',
+                'icon': 'donut_small',
+                'link': 'academics/create-religion',
+                'open': false,
+            },
+            {
+                'name': 'Class Subject Assign',
+                'icon': 'compare_arrows',
+                'link': 'academics/assign-class-subject',
+                'open': false,
+            },
+            {
+                'name': 'Class Teacher Allocation',
+                'icon': 'donut_large',
+                'link': 'academics/allocate-class-teacher',
+                'open': false,
+            },
+            {
+                'name': 'Define Period',
+                'icon': 'explore',
+                'link': 'academics/define-period',
+                'open': false,
+            },
+            {
+                'name': 'Create Class Timetable',
+                'icon': 'schedule',
+                'link': 'academics/create-class-timetable',
+                'open': false,
+            },
+            {
+                'name': 'View / Print Class Timetable',
+                'icon': 'event_note',
+                'link': 'academics/view-class-timetable',
+                'open': false,
+            },
+            {
+                'name': 'View Teacher Timetable',
+                'icon': 'table_chart',
+                'link': 'academics/view-teacher-timetable',
+                'open': false,
+            },
+            {
+                'name': 'Create Circular / Notice / Information',
+                'icon': 'confirmation_number',
+                'link': 'academics/create-notice',
+                'open': false,
+            },
+            {
+                'name': 'Circular / Notice / Information-Search/Print',
+                'icon': 'print',
+                'link': 'academics/print-notice',
+                'open': false,
+            }
+        ]
+    }, {
         'name': 'Teachers',
         'icon': 'account_circle',
         'open': false,
@@ -325,7 +422,7 @@ export const menus = [
             {
                 'name': 'View Teachers Attendence',
                 'icon': 'ballot',
-                'link': 'teachers/view-teacher',
+                'link': 'teachers/view-teacher-attendance',
                 'open': false,
             },
             {
@@ -336,104 +433,219 @@ export const menus = [
             }
         ]
     }, {
-        'name': 'Academics',
-        'icon': 'account_circle',
+        'name': 'Students',
+        'icon': 'group',
         'open': false,
         'link': false,
         'sub': [
             {
-                'name': 'Create Academic Year',
-                'icon': 'person_add',
-                'link': 'academics/create-academics-yr',
+                'name': 'Student Admission',
+                'icon': 'group_add',
+                'link': 'students/student-admission',
                 'open': false,
             },
             {
-                'name': 'Create Section',
-                'icon': 'how_to_reg',
-                'link': 'academics/view-teacher',
+                'name': 'Student ID Card',
+                'icon': 'picture_in_picture',
+                'link': 'students/generate-id-card',
                 'open': false,
             },
             {
-                'name': 'Create Class',
-                'icon': 'gesture',
-                'link': 'academics/attedence-teacher',
+                'name': 'Student Records',
+                'icon': 'recent_actors',
+                'link': 'students/view-student-record',
                 'open': false,
             },
             {
-                'name': 'Limit Student in Class - Section',
-                'icon': 'ballot',
-                'link': 'academics/view-teacher',
+                'name': 'Student Attendance',
+                'icon': 'add_comment',
+                'link': 'students/view-student-attendance',
                 'open': false,
             },
             {
-                'name': 'Create Subject',
-                'icon': 'attach_money',
-                'link': 'academics/teacher-payment',
+                'name': 'Student Guardian',
+                'icon': 'wc',
+                'link': 'students/student-guardian',
                 'open': false,
             },
             {
-                'name': 'Create Category',
-                'icon': 'attach_money',
-                'link': 'academics/teacher-payment',
+                'name': 'Student Attendance Report',
+                'icon': 'layers',
+                'link': 'students/student-attendance-report',
+                'open': false,
+            }
+        ]
+    }, {
+        'name': 'Fees',
+        'icon': 'monetization_on',
+        'open': false,
+        'link': false,
+        'sub': [
+            {
+                'name': 'Fee Frequency',
+                'icon': 'call_received',
+                'link': 'fees/fee-frequency',
                 'open': false,
             },
             {
-                'name': 'Create Religion',
-                'icon': 'attach_money',
-                'link': 'academics/teacher-payment',
+                'name': 'Fee Name',
+                'icon': 'chrome_reader_mode',
+                'link': 'fees/fee-name',
                 'open': false,
             },
             {
-                'name': 'Class Subject Assign',
-                'icon': 'attach_money',
-                'link': 'academics/teacher-payment',
-                'open': false,
-            },
-
-
-
-
-
-            {
-                'name': 'Class Teacher Allocation',
-                'icon': 'attach_money',
-                'link': 'academics/teacher-payment',
+                'name': 'Class Wise Fee',
+                'icon': 'settings_applications',
+                'link': 'fees/class-wise-fee',
                 'open': false,
             },
             {
-                'name': 'Define Period',
-                'icon': 'attach_money',
-                'link': 'academics/teacher-payment',
+                'name': 'Check Fee Status',
+                'icon': 'visibility',
+                'link': 'fees/fee-status-check',
                 'open': false,
             },
             {
-                'name': 'Create Class Timetable',
-                'icon': 'attach_money',
-                'link': 'academics/teacher-payment',
+                'name': 'Fee Payments',
+                'icon': 'play_for_work',
+                'link': 'fees/fee-payments',
+                'open': false,
+            }
+        ]
+    }, {
+        'name': 'Exam',
+        'icon': 'spa',
+        'open': false,
+        'link': false,
+        'sub': [
+            {
+                'name': 'Set Term',
+                'icon': 'track_changes',
+                'link': 'exams/set-term',
                 'open': false,
             },
             {
-                'name': 'View / Print Class Timetable',
-                'icon': 'attach_money',
-                'link': 'academics/teacher-payment',
+                'name': 'Create Sittings',
+                'icon': 'library_add',
+                'link': 'exams/create-sittings',
                 'open': false,
             },
             {
-                'name': 'View Teacher Timetable',
-                'icon': 'attach_money',
-                'link': 'academics/teacher-payment',
+                'name': 'Set Exam',
+                'icon': 'explicit',
+                'link': 'exams/set-exams',
                 'open': false,
             },
             {
-                'name': 'Create Circular / Notice / Information',
-                'icon': 'attach_money',
-                'link': 'academics/teacher-payment',
+                'name': 'Update Exam Marks',
+                'icon': 'update',
+                'link': 'exams/update-exam-marks',
                 'open': false,
             },
             {
-                'name': 'Circular / Notice / Information-Search/Print',
-                'icon': 'attach_money',
-                'link': 'academics/teacher-payment',
+                'name': 'Generate Report Card',
+                'icon': 'receipt',
+                'link': 'exams/generate-report-card',
+                'open': false,
+            }
+        ]
+    }, {
+        'name': 'Library',
+        'icon': 'local_library',
+        'open': false,
+        'link': false,
+        'sub': [
+            {
+                'name': 'Add Book Category',
+                'icon': 'library_add',
+                'link': 'library/add-book-category',
+                'open': false,
+            },
+            {
+                'name': 'Add Books',
+                'icon': 'library_books',
+                'link': 'library/add-book',
+                'open': false,
+            },
+            {
+                'name': 'Issue / Return / Re-new Books',
+                'icon': 'compare_arrows',
+                'link': 'library/issue-or-return-book',
+                'open': false,
+            }
+        ]
+    }, {
+        'name': 'SMS / E-Mail',
+        'icon': 'mail',
+        'open': false,
+        'link': false,
+        'sub': [
+            {
+                'name': 'Mail',
+                'icon': 'mail_outline',
+                'link': 'email-sms/mail',
+                'open': false,
+            },
+            {
+                'name': 'Message',
+                'icon': 'sms',
+                'link': 'email-sms/message',
+                'open': false,
+            }
+        ]
+    }, {
+        'name': 'Reports',
+        'icon': 'description',
+        'open': false,
+        'link': false,
+        'sub': [
+            {
+                'name': 'Student Report',
+                'icon': 'list',
+                'link': 'reports/student-report',
+                'open': false,
+            },
+            {
+                'name': 'Student Details',
+                'icon': 'face',
+                'link': 'reports/student-details',
+                'open': false,
+            },
+            {
+                'name': 'Fee Due Report',
+                'icon': 'polymer',
+                'link': 'reports/fee-due-report',
+                'open': false,
+            },
+            {
+                'name': 'Fee Paid Report',
+                'icon': 'toc',
+                'link': 'reports/fee-paid-report',
+                'open': false,
+            },
+            {
+                'name': 'Absentee Report',
+                'icon': 'vertical_split',
+                'link': 'reports/absentee-report',
+                'open': false,
+            }
+        ]
+    }, {
+        'name': 'Alumnus',
+        'icon': 'person_add_disabled',
+        'open': false,
+        'link': false,
+        'sub': [
+            {
+                'name': 'View Previous Students',
+                'icon': 'school',
+                'link': 'alumnus/view-previous-students',
+                'open': false,
+            },
+            {
+                'name': 'View Previous Teachers',
+                'icon': 'people_outline',
+                'link': 'alumnus/view-previous-teachers',
                 'open': false,
             }
         ]

@@ -1,3 +1,4 @@
+for free admin template : https://www.akveo.com/blog/top-7-nicely-looking-free-open-source-angular-projects/
 # CdK Admin - FREE PREMIUM ANGULAR 5 MATERIAL DESIGN+FLEX LAYOUT ADMIN PANEL
 
 for bugs use github issue tracker 
