@@ -1,12 +1,142 @@
-<div class="example-container">
-  <mat-form-field hintLabel="Max 10 characters">
-    <input matInput #input maxlength="10" placeholder="Enter some input">
-    <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
+<!-- <div class="example-container">
+  <mat-form-field>
+    <input matInput placeholder="Section Name">
   </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Section Code">
+  </mat-form-field>
+
+
+    <button mat-raised-button color="primary">Primary</button>
+
 
   <mat-form-field>
-    <button mat-button>Add Section</button>
-    <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
-  </mat-form-field>
-</div>
+    <textarea matInput placeholder="Textarea"></textarea>
+  </mat-form-field> 
 
+  <mat-form-field>
+    <mat-select placeholder="State">
+      <mat-option>None</mat-option>
+      <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div> -->
+
+
+
+
+<div fxLayout="column" class="components-container-gt-xs" [ngClass.xs]="'components-container-xs'" fxLayoutGap="20px">
+
+  <div fxFlex class="form-component-holder mat-elevation-z4">
+    <mat-toolbar class="form-header">
+      <h1 class="mat-headline center-align">Add Class Section</h1>
+    </mat-toolbar>
+    <div [hidden]="submitted" style="background-color: white;">
+
+      <form (ngSubmit)="addSection()" fxLayout="column" #addSectionForm='ngForm' >
+
+
+        <div class="isa_success" *ngIf="msgSuccess">
+          <mat-icon>check_circle</mat-icon>
+          <strong> {{ msgSuccess }} </strong>
+        </div>
+        <div class="isa_error" *ngIf="msgError">
+            <mat-icon>error</mat-icon>
+            <strong> {{ msgError }} </strong>
+          </div>
+
+        <mat-form-field>
+          <input matInput type="text" [(ngModel)]="model.name" name="name" #name="ngModel" required minlength="4"
+            maxlength="50" placeholder="Section Name" (click)=clearSuccessOrErrorMsg()>
+        </mat-form-field>
+        <div style="color:red" *ngIf="name.invalid && (name.dirty || name.touched)" class="mat-body-1 center-align">
+          <div *ngIf="name.errors.required">
+            Section Name is required.
+          </div>
+          <div *ngIf="name.errors.minlength">
+            Name must be at least 4 characters long.
+          </div>
+        </div>
+
+        <mat-form-field>
+          <input matInput type="text" [(ngModel)]="model.code" name="code" #code="ngModel" required minlength="1"
+            maxlength="1" placeholder="Section Code" (click)=clearSuccessOrErrorMsg()>
+        </mat-form-field>
+        <div style="color:red" *ngIf="code.invalid && (code.dirty || code.touched)" class="mat-body-1 center-align">
+          <div *ngIf="code.errors.required">
+            Section Code is required.
+          </div>
+          <div *ngIf="code.errors.minlength">
+            Code must be at least 1 characters long.
+          </div>
+        </div>
+
+        <div class="buttonDiv">
+          <button mat-raised-button type="submit" [disabled]="name.invalid||code.invalid" class="mat-subheading-2 center-align button-style">Add
+          Section</button>
+        </div>
+      </form>
+    </div>
+
+
+  </div>
+
+  <div fxFlex class="table-component-holder mat-elevation-z4">
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter Section">
+    </mat-form-field>
+
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource" matSort>
+
+        <!-- ID Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> <strong>Sr No.</strong> </th>
+          <td mat-cell *matCellDef="let row"> {{row.id}}. </td>
+        </ng-container>
+
+        <!-- section name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Section Name </th>
+          <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+        </ng-container>
+
+        <!-- section code Column -->
+        <ng-container matColumnDef="code">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Section Code </th>
+          <td mat-cell *matCellDef="let row"> {{row.code}} </td>
+        </ng-container>
+
+        <!-- createDate Column -->
+        <ng-container matColumnDef="createDate">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Created Date </th>
+          <td mat-cell *matCellDef="let row"> {{row.createDate | date: 'dd-MM-yyyy HH:mm:ss' }} </td>
+        </ng-container>
+
+        <!-- createBy Column -->
+        <ng-container matColumnDef="createBy">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Created By </th>
+          <td mat-cell *matCellDef="let row"> {{row.createBy}} </td>
+        </ng-container>
+
+        <!-- Edit column -->
+        <ng-container matColumnDef="edit">
+          <th mat-header-cell *matHeaderCellDef> Edit </th>
+          <td mat-cell *matCellDef="let row" (click)="openEditSectionDialog(row)"> <mat-icon class="actionEdit">edit</mat-icon> </td>
+        </ng-container>
+
+        <!-- Delete column -->
+        <ng-container matColumnDef="delete">
+          <th mat-header-cell *matHeaderCellDef> Delete </th>
+          <td mat-cell *matCellDef="let row" (click)="openDeleteSectionDialog(row)"> <mat-icon class="actionDelete">delete_forever</mat-icon> </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+        </tr>
+      </table>
+
+      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+    </div>
+  </div>
+</div>

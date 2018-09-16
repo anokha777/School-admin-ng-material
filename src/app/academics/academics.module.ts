@@ -17,17 +17,52 @@ import { ViewClassTimetableComponent } from './view-class-timetable/view-class-t
 import { ViewTeacherTimetableComponent } from './view-teacher-timetable/view-teacher-timetable.component';
 import { CreateNoticeComponent } from './create-notice/create-notice.component';
 import { CircularNoticeInformationPrintComponent } from './circular-notice-information-print/circular-notice-information-print.component';
-import { MatButtonModule, MatFormFieldModule } from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatTableModule} from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material';
+import {MatSortModule} from '@angular/material/sort';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatSelectModule} from '@angular/material/select';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material'
 
+
+import { 
+			MatButtonModule,
+			MatToolbarModule,
+			MatCardModule,
+			MatTabsModule,
+			MatIconModule,} from '@angular/material';
+import { MatInputModule } from '@angular/material';
+import {  ReactiveFormsModule } from '@angular/forms';
+
+import { FormsModule }   from '@angular/forms';
+import { EditSectionModalComponent } from './create-section/edit-section-modal/edit-section-modal.component';
+import { EditClassModalComponent } from './create-class/edit-class-modal/edit-class-modal.component';
 
 
 @NgModule({
   imports: [
     CommonModule,
     AcademicsRoutingModule,
+    FlexLayoutModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatTabsModule,
+    MatIconModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatInputModule,
     MatButtonModule,
-    MatFormFieldModule
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatDialogModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
-  declarations: [CreateSectionComponent, CreateAcademicYearComponent, CreateClassComponent, LimitStudentsInSectionComponent, CreateSubjectComponent, CreateCategoryComponent, CreateReligionComponent, AssignClassSubjectComponent, AllocateClassTeacherComponent, DefinePeriodComponent, CreateClassTimetableComponent, ViewClassTimetableComponent, ViewTeacherTimetableComponent, CreateNoticeComponent, CircularNoticeInformationPrintComponent]
+  declarations: [CreateSectionComponent, CreateAcademicYearComponent, CreateClassComponent, LimitStudentsInSectionComponent, CreateSubjectComponent, CreateCategoryComponent, CreateReligionComponent, AssignClassSubjectComponent, AllocateClassTeacherComponent, DefinePeriodComponent, CreateClassTimetableComponent, ViewClassTimetableComponent, ViewTeacherTimetableComponent, CreateNoticeComponent, CircularNoticeInformationPrintComponent, EditSectionModalComponent, EditClassModalComponent],
+  entryComponents: [ EditSectionModalComponent, EditClassModalComponent ]
 })
 export class AcademicsModule { }
