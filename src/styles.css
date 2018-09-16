@@ -52,6 +52,10 @@ table {
     width: 100%;
 }
 
+.mat-form-field {
+    display: block;
+}
+
 /* Message display start */
 .isa_success {
     color: #4F8A10;

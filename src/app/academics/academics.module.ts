@@ -39,6 +39,9 @@ import {  ReactiveFormsModule } from '@angular/forms';
 import { FormsModule }   from '@angular/forms';
 import { EditSectionModalComponent } from './create-section/edit-section-modal/edit-section-modal.component';
 import { EditClassModalComponent } from './create-class/edit-class-modal/edit-class-modal.component';
+import { EditSubjectModalComponent } from './create-subject/edit-subject-modal/edit-subject-modal.component';
+import { EditCategoryModalComponent } from './create-category/edit-category-modal/edit-category-modal.component';
+import { EditReligionModalComponent } from './create-religion/edit-religion-modal/edit-religion-modal.component';
 
 
 @NgModule({
@@ -62,7 +65,33 @@ import { EditClassModalComponent } from './create-class/edit-class-modal/edit-cl
     MatDatepickerModule,
     MatNativeDateModule
   ],
-  declarations: [CreateSectionComponent, CreateAcademicYearComponent, CreateClassComponent, LimitStudentsInSectionComponent, CreateSubjectComponent, CreateCategoryComponent, CreateReligionComponent, AssignClassSubjectComponent, AllocateClassTeacherComponent, DefinePeriodComponent, CreateClassTimetableComponent, ViewClassTimetableComponent, ViewTeacherTimetableComponent, CreateNoticeComponent, CircularNoticeInformationPrintComponent, EditSectionModalComponent, EditClassModalComponent],
-  entryComponents: [ EditSectionModalComponent, EditClassModalComponent ]
+  declarations: [
+    CreateSectionComponent, 
+    CreateAcademicYearComponent, 
+    CreateClassComponent, 
+    LimitStudentsInSectionComponent, 
+    CreateSubjectComponent, 
+    CreateCategoryComponent, 
+    CreateReligionComponent, 
+    AssignClassSubjectComponent, 
+    AllocateClassTeacherComponent, 
+    DefinePeriodComponent, 
+    CreateClassTimetableComponent, 
+    ViewClassTimetableComponent, 
+    ViewTeacherTimetableComponent, 
+    CreateNoticeComponent, 
+    CircularNoticeInformationPrintComponent, 
+    EditSectionModalComponent, 
+    EditClassModalComponent, 
+    EditSubjectModalComponent,
+    EditCategoryModalComponent,
+    EditReligionModalComponent
+  ],
+  entryComponents: [ 
+    EditSectionModalComponent, 
+    EditClassModalComponent, 
+    EditSubjectModalComponent,
+    EditCategoryModalComponent,
+    EditReligionModalComponent ]
 })
 export class AcademicsModule { }
