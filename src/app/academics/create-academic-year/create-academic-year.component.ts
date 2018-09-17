@@ -82,7 +82,7 @@ export class CreateAcademicYearComponent implements OnInit {
     console.log('this.addAcademicYearForm=== ', this.addAcademicYearForm.value);
     if (this.addAcademicYearForm.valid) {
       // call REST API to check if academic year already exists in database and to save into database
-      if (true) { // assuming this is now academic year to be added
+      if (false) { // assuming this is now academic year to be added
         
 
         const newAcademicYear: AcademicYearModule = new AcademicYearModule(this.academicYearArray.length + 1,

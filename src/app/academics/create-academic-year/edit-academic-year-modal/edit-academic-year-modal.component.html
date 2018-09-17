@@ -1,11 +1,6 @@
 <h2 mat-dialog-title>Update - {{ academicMonthStart }}-{{academicYearStart}} to {{academicMonthEnd}}-{{academicYearEnd}}</h2>
 
 <mat-dialog-content [formGroup]="form">
-  <!-- <mat-form-field>
-    <input matInput placeholder="Start Month of Academic Year" value="{{ academicMonthStart }}" formControlName="academicMonthStart">
-  </mat-form-field> -->
-
-
   <mat-form-field>
     <mat-select placeholder="Start month of Academic year" aria-required="true" 
     name="academicMonthStart"  [value]="academicMonthStart" required>
@@ -14,10 +9,20 @@
     </mat-select>
   </mat-form-field>
 
-
-
   <mat-form-field>
     <input matInput placeholder="Academic Start Year (YYYY)" value='{{ academicYearStart }}' formControlName="academicYearStart">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select placeholder="End month of Academic year" aria-required="true" 
+    name="academicMonthEnd"  [value]="academicMonthEnd" required>
+      <mat-option>End month of Academic year</mat-option>
+      <mat-option *ngFor="let month of fullMonthName" [value]="month">{{month}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Academic End Year (YYYY)" value='{{ academicYearEnd }}' formControlName="academicYearEnd">
   </mat-form-field>
 
 </mat-dialog-content>
