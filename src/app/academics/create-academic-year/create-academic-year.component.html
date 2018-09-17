@@ -23,8 +23,8 @@
 
       <div fxLayout="column">
         <mat-form-field>
-          <input matInput type="number" [(ngModel)]="model.academicYearStart" name="academicYearStart"
-            #academicYearStart="ngModel" required minlength="4" maxlength="4" placeholder="YYYY">
+          <input matInput type="text" [(ngModel)]="model.academicYearStart" name="academicYearStart"
+            #academicYearStart="ngModel" required minlength="4" maxlength="4" placeholder="YYYY" OnlyNumber="true">
         </mat-form-field>
         <div style="color:red" *ngIf="academicYearStart.invalid && (academicYearStart.dirty || academicYearStart.touched)"
           class="mat-body-1 center-align">
@@ -56,7 +56,7 @@
             Year required.
           </div>
           <div *ngIf="academicYearEnd.errors.minlength">
-            Year must be of 4 characters long.
+            Year must be of 4 characters long. 
           </div>
         </div>
       </div>
@@ -67,80 +67,64 @@
 
     </form>
   </div>
-</div>
 
+  
+  <div fxFlex class="table-component-holder mat-elevation-z4">
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter Category">
+    </mat-form-field>
 
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource" matSort>
 
-<div class="components-container-gt-xs" [ngClass.xs]="'components-container-xs'">
+        <!-- ID Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> <strong>Sr No.</strong> </th>
+          <td mat-cell *matCellDef="let row"> {{row.id}}. </td>
+        </ng-container>
 
-  <div fxFlex class="form-component-holder mat-elevation-z4">
-    <mat-toolbar class="form-header">
-      <h1 class="mat-headline center-align">Create Academic Year</h1>
-    </mat-toolbar>
-    <div fxLayout="row" fxLayoutGap="20px">
+        <!-- Academic Year Name Column -->
+        <ng-container matColumnDef="academicYearName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Academic Year Name </th>
+          <td mat-cell *matCellDef="let row"> {{row.academicYearStart}} - {{row.academicYearEnd}} </td>
+        </ng-container>
 
-      <!-- <div [hidden]="submitted" style="background-color: white;"> -->
+        <!-- Academic Start Column -->
+        <ng-container matColumnDef="academicStartMonthYear">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Academic Start</th>
+          <td mat-cell *matCellDef="let row"> {{row.academicMonthStart}}-{{row.academicYearStart}} </td>
+        </ng-container>
 
-      <form (ngSubmit)="addAcademicYear()" fxLayout="row" #addAcademicYearForm='ngForm'>
-        <!-- 
-        <div class="isa_success" *ngIf="msgSuccess">
-          <mat-icon>check_circle</mat-icon>
-          <strong> {{ msgSuccess }} </strong>
-        </div>
-        <div class="isa_error" *ngIf="msgError">
-          <mat-icon>error</mat-icon>
-          <strong> {{ msgError }} </strong>
-        </div>
+        <!-- Academic End Column -->
+        <ng-container matColumnDef="academicEndMonthYear">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Academic End</th>
+          <td mat-cell *matCellDef="let row"> {{row.academicMonthEnd}}-{{row.academicYearEnd}} </td>
+        </ng-container>
 
-        <div fxFlex.xs="100" fxFlex.lg="50" fxFlex.md="50" fxFlex.sm="50">
-          <mat-form-field>
-            <input matInput type="text" [(ngModel)]="model.academicYearName" name="academicYearName" #academicYearName="ngModel"
-              required minlength="4" maxlength="4" placeholder="YYYY" (click)=clearSuccessOrErrorMsg()>
-          </mat-form-field>
-          <div style="color:red" *ngIf="academicYearName.invalid && (academicYearName.dirty || academicYearName.touched)"
-            class="mat-body-1 center-align">
-            <div *ngIf="academicYearName.errors.required">
-              Academic Year required.
-            </div>
-            <div *ngIf="academicYearName.errors.minlength">
-              Name must be of 4 characters long.
-            </div>
-          </div>
+        <!-- createDate Column -->
+        <ng-container matColumnDef="createDate">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Created Date </th>
+          <td mat-cell *matCellDef="let row"> {{row.createDate | date: 'dd-MM-yyyy HH:mm:ss' }} </td>
+        </ng-container>
 
+        <!-- createBy Column -->
+        <ng-container matColumnDef="createBy">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Created By </th>
+          <td mat-cell *matCellDef="let row"> {{row.createBy}} </td>
+        </ng-container>
 
-          <mat-form-field>
-            <mat-select placeholder="Start Month" aria-required="true" required>
-              <mat-option>Start Month</mat-option>
-              <mat-option *ngFor="let month of fullMonthName" [value]="month">{{month}}</mat-option>
-            </mat-select>
-          </mat-form-field>
-        </div> -->
+        <!-- Edit column -->
+        <ng-container matColumnDef="edit">
+          <th mat-header-cell *matHeaderCellDef> Edit </th>
+          <td mat-cell *matCellDef="let row" (click)="openEditAcademicYearDialog(row)"> <mat-icon class="actionEdit">edit</mat-icon> </td>
+        </ng-container>
 
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+        </tr>
+      </table>
 
-
-
-        <!-- <mat-form-field>
-          <input matInput type="text" [(ngModel)]="model.academicStartYearMonth" name="academicStartYearMonth" #academicStartYearMonth="ngModel" required minlength="1"
-            maxlength="4" placeholder="Academic Year Code" (click)=clearSuccessOrErrorMsg()>
-        </mat-form-field>
-        <div style="color:red" *ngIf="code.invalid && (code.dirty || code.touched)" class="mat-body-1 center-align">
-          <div *ngIf="code.errors.required">
-            Academic Year required.
-          </div>
-          <div *ngIf="code.errors.minlength">
-            Code must be at least 1 characters long.
-          </div>
-        </div>
-
-        <div class="buttonDiv">
-          <button mat-raised-button type="submit" [disabled]="academicYearName.invalid||code.invalid" class="mat-subheading-2 center-align button-style">Add
-          Academic Year</button>
-        </div> -->
-      </form>
-      <!-- </div> -->
-
+      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
     </div>
   </div>
-
-
 </div>

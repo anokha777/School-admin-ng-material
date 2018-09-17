@@ -43,6 +43,7 @@ import { EditSubjectModalComponent } from './create-subject/edit-subject-modal/e
 import { EditCategoryModalComponent } from './create-category/edit-category-modal/edit-category-modal.component';
 import { EditReligionModalComponent } from './create-religion/edit-religion-modal/edit-religion-modal.component';
 import { OnlyNumberDirective } from './directives/only-number.directive';
+import { EditAcademicYearModalComponent } from './create-academic-year/edit-academic-year-modal/edit-academic-year-modal.component';
 
 
 @NgModule({
@@ -87,6 +88,7 @@ import { OnlyNumberDirective } from './directives/only-number.directive';
     EditSubjectModalComponent,
     EditCategoryModalComponent,
     EditReligionModalComponent,
+    EditAcademicYearModalComponent,
     OnlyNumberDirective
   ],
   entryComponents: [ 
@@ -94,6 +96,7 @@ import { OnlyNumberDirective } from './directives/only-number.directive';
     EditClassModalComponent, 
     EditSubjectModalComponent,
     EditCategoryModalComponent,
-    EditReligionModalComponent ]
+    EditReligionModalComponent,
+    EditAcademicYearModalComponent ]
 })
 export class AcademicsModule { }
