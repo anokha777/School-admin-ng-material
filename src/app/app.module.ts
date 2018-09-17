@@ -24,7 +24,8 @@ import { LazyLoadModule } from './lazy-load/lazy-load.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 import { DeleteModalComponent } from './delete-modal/delete-modal.component';
-
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { OnlyNumberDirective } from './academics/directives/only-number.directive';
 
 
 
@@ -50,7 +51,8 @@ import { DeleteModalComponent } from './delete-modal/delete-modal.component';
     MatCardModule,
     MatTabsModule,
     MatIconModule,
-    MatInputModule
+    MatInputModule,
+    MatSnackBarModule
   ],
   exports: [
     BrowserModule,
@@ -72,13 +74,15 @@ import { DeleteModalComponent } from './delete-modal/delete-modal.component';
     MatCardModule,
     MatTabsModule,
     MatIconModule,
-    MatInputModule
+    MatInputModule,
+    MatSnackBarModule
   ],
 
   providers: [],
   declarations: [
     AppComponent,
     DeleteModalComponent
+    
   ],
   entryComponents: [ DeleteModalComponent ],
   bootstrap: [AppComponent]

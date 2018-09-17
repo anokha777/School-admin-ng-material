@@ -42,6 +42,7 @@ import { EditClassModalComponent } from './create-class/edit-class-modal/edit-cl
 import { EditSubjectModalComponent } from './create-subject/edit-subject-modal/edit-subject-modal.component';
 import { EditCategoryModalComponent } from './create-category/edit-category-modal/edit-category-modal.component';
 import { EditReligionModalComponent } from './create-religion/edit-religion-modal/edit-religion-modal.component';
+import { OnlyNumberDirective } from './directives/only-number.directive';
 
 
 @NgModule({
@@ -85,7 +86,8 @@ import { EditReligionModalComponent } from './create-religion/edit-religion-moda
     EditClassModalComponent, 
     EditSubjectModalComponent,
     EditCategoryModalComponent,
-    EditReligionModalComponent
+    EditReligionModalComponent,
+    OnlyNumberDirective
   ],
   entryComponents: [ 
     EditSectionModalComponent, 

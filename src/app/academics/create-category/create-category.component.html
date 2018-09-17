@@ -7,20 +7,9 @@
     <div [hidden]="submitted" style="background-color: white;">
 
       <form (ngSubmit)="addCategory()" fxLayout="column" #addCategoryForm='ngForm' >
-
-
-        <div class="isa_success" *ngIf="msgSuccess">
-          <mat-icon>check_circle</mat-icon>
-          <strong> {{ msgSuccess }} </strong>
-        </div>
-        <div class="isa_error" *ngIf="msgError">
-            <mat-icon>error</mat-icon>
-            <strong> {{ msgError }} </strong>
-          </div>
-
         <mat-form-field>
           <input matInput type="text" [(ngModel)]="model.name" name="name" #name="ngModel" required minlength="4"
-            maxlength="50" placeholder="Category Name" (click)=clearSuccessOrErrorMsg()>
+            maxlength="50" placeholder="Category Name" >
         </mat-form-field>
         <div style="color:red" *ngIf="name.invalid && (name.dirty || name.touched)" class="mat-body-1 center-align">
           <div *ngIf="name.errors.required">
@@ -33,7 +22,7 @@
 
         <mat-form-field>
           <input matInput type="text" [(ngModel)]="model.code" name="code" #code="ngModel" required minlength="1"
-            maxlength="4" placeholder="Category Code" (click)=clearSuccessOrErrorMsg()>
+            maxlength="4" placeholder="Category Code" >
         </mat-form-field>
         <div style="color:red" *ngIf="code.invalid && (code.dirty || code.touched)" class="mat-body-1 center-align">
           <div *ngIf="code.errors.required">

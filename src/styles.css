@@ -21,7 +21,10 @@
 	padding: 0 5px;
 }
 .mat-form-field{
-	padding-left:10px;
+	padding-left:10px 0 10px 0;
+	display: block;
+	font-size: 14px;
+    width: 100%;
 }
 .container{
 	padding-left:10px;
@@ -46,15 +49,6 @@
 table {
     width: 100%;
   }
-  
-.mat-form-field {
-    font-size: 14px;
-    width: 100%;
-}
-
-.mat-form-field {
-    display: block;
-}
 
 /* Message display start */
 .isa_success {
