@@ -1,0 +1,39 @@
+<h2 mat-dialog-title>Update Cast Detail for - {{ castName }}. </h2>
+
+<mat-dialog-content [formGroup]="form">
+  <mat-form-field>
+    <mat-select placeholder="Select Class" aria-required="true" name="className" [value]="className" required disabled>
+      <mat-option>Select Class</mat-option>
+      <mat-option *ngFor="let classNameVar of classNameList" [value]="classNameVar">{{classNameVar}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select placeholder="Select Section" aria-required="true" name="sectionName" [value]="sectionName" required
+      disabled>
+      <mat-option>Select Class</mat-option>
+      <mat-option *ngFor="let sectionNameVar of sectionNameList" [value]="sectionNameVar">{{sectionNameVar}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput value='{{ limitBoyNumber }}' formControlName="limitBoyNumber" required minlength="1" maxlength="3"
+      placeholder="Max. Number of Boy" OnlyNumber="true">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput value='{{ limitGirlNumber }}' formControlName="limitGirlNumber" placeholder="Max. Number of Girl"
+      minlength="1" maxlength="3" required OnlyNumber="true">
+  </mat-form-field>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button class="mat-raised-button" (click)="close()">
+    Close
+  </button>
+  <button class="mat-raised-button mat-primary" (click)="save()"
+  [disabled]="limitBoyNumber.invalid||limitGirlNumber.invalid">
+    Save
+  </button>
+
+
+</mat-dialog-actions>

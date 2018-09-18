@@ -15,6 +15,7 @@ import { AllocateClassTeacherComponent } from './allocate-class-teacher/allocate
 import { AssignClassSubjectComponent } from './assign-class-subject/assign-class-subject.component';
 import { CreateReligionComponent } from './create-religion/create-religion.component';
 import { CreateCategoryComponent } from './create-category/create-category.component';
+import { CreateCastComponent } from './create-cast/create-cast.component';
 
 const routes: Routes = [
   {path: 'create-academics-yr', component: CreateAcademicYearComponent},
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path: 'create-subject', component: CreateSubjectComponent},
   {path: 'create-category', component: CreateCategoryComponent},
   {path: 'create-religion', component: CreateReligionComponent},
+  {path: 'create-cast', component: CreateCastComponent},
   {path: 'assign-class-subject', component: AssignClassSubjectComponent},
   {path: 'allocate-class-teacher', component: AllocateClassTeacherComponent},
   {path: 'define-period', component: DefinePeriodComponent},

@@ -8,16 +8,14 @@ export class AcademicsUtils {
     constructor() { }
 
     // find object by property from array of object - function for section creation (to check if section already exists.)
-    findOjectInArrayByProperty(arr, value) {
-        let sectionExists: boolean = false;
+    findOjectInArrayByProperty(arr: any, value: string) {
+        let objectExists: boolean = false;
         arr.filter(function (o) {
-            if (o.name.toUpperCase() === value.toUpperCase()) {
-                sectionExists = true;
-            } else if (o.code.toUpperCase() === value.toUpperCase()) {
-                sectionExists = true;
-            }
+            if ((o.name.toUpperCase() === value.toUpperCase()) || (o.code.toUpperCase() === value.toUpperCase())) {
+                objectExists = true;
+            } 
         });
-        return sectionExists;
+        return objectExists;
     }
 
 }

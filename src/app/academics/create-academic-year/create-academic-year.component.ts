@@ -13,8 +13,6 @@ import { EditAcademicYearModalComponent } from './edit-academic-year-modal/edit-
   styleUrls: ['./create-academic-year.component.scss']
 })
 export class CreateAcademicYearComponent implements OnInit {
-  msgSuccess: string = '';
-  msgError: string = '';
   academicYearArray: AcademicYearModule[];
   fullMonthName: string[] = FullMonthName;
   msgCreateSuccessAcademicYear: string = msgCreateSuccessAcademicYear;
@@ -83,8 +81,6 @@ export class CreateAcademicYearComponent implements OnInit {
     if (this.addAcademicYearForm.valid) {
       // call REST API to check if academic year already exists in database and to save into database
       if (false) { // assuming this is now academic year to be added
-        
-
         const newAcademicYear: AcademicYearModule = new AcademicYearModule(this.academicYearArray.length + 1,
           this.addAcademicYearForm.value.academicMonthStart, this.addAcademicYearForm.value.academicYearStart,
           this.addAcademicYearForm.value.academicMonthEnd, this.addAcademicYearForm.value.academicYearEnd, 

@@ -44,6 +44,9 @@ import { EditCategoryModalComponent } from './create-category/edit-category-moda
 import { EditReligionModalComponent } from './create-religion/edit-religion-modal/edit-religion-modal.component';
 import { OnlyNumberDirective } from './directives/only-number.directive';
 import { EditAcademicYearModalComponent } from './create-academic-year/edit-academic-year-modal/edit-academic-year-modal.component';
+import { EditLimitStudentModalComponent } from './limit-students-in-section/edit-limit-student-modal/edit-limit-student-modal.component';
+import { CreateCastComponent } from './create-cast/create-cast.component';
+import { EditCastModalComponent } from './create-cast/edit-cast-modal/edit-cast-modal.component';
 
 
 @NgModule({
@@ -89,7 +92,10 @@ import { EditAcademicYearModalComponent } from './create-academic-year/edit-acad
     EditCategoryModalComponent,
     EditReligionModalComponent,
     EditAcademicYearModalComponent,
-    OnlyNumberDirective
+    EditLimitStudentModalComponent,
+    EditCastModalComponent,
+    OnlyNumberDirective,
+    CreateCastComponent
   ],
   entryComponents: [ 
     EditSectionModalComponent, 
@@ -97,6 +103,8 @@ import { EditAcademicYearModalComponent } from './create-academic-year/edit-acad
     EditSubjectModalComponent,
     EditCategoryModalComponent,
     EditReligionModalComponent,
-    EditAcademicYearModalComponent ]
+    EditAcademicYearModalComponent,
+    EditLimitStudentModalComponent,
+    EditCastModalComponent ]
 })
 export class AcademicsModule { }

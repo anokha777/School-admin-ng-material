@@ -1,0 +1,113 @@
+<div class="components-container-gt-xs" [ngClass.xs]="'components-container-xs'">
+  <div fxFlex class="form-component-holder mat-elevation-z4">
+    <mat-toolbar class="form-header">
+      <h1 class="mat-headline center-align"></h1>
+    </mat-toolbar>
+    <form (ngSubmit)="addCast()" #castForm='ngForm'>
+      <div class="form-fields" fxLayout="row" fxLayoutGap="20px">
+        <div fxLayout="column">
+          <mat-form-field>
+            <input matInput type="text" [(ngModel)]="model.castName" name="castName" #castName="ngModel" required
+              minlength="4" maxlength="50" placeholder="Cast Name">
+          </mat-form-field>
+          <div style="color:red" *ngIf="castName.invalid && (castName.dirty || castName.touched)" class="mat-body-1 center-align">
+            <div *ngIf="castName.errors.required">
+              Cast name required.
+            </div>
+            <div *ngIf="castName.errors.minlength">
+              Cast name must be of 4 characters long.
+            </div>
+          </div>
+        </div>
+        <mat-form-field>
+          <mat-select placeholder="Select Religion" aria-required="true" [(ngModel)]="model.religionName" name="religionName"
+            #religionName="ngModel" required>
+            <mat-option>Select Religion</mat-option>
+            <mat-option *ngFor="let religion of religionList" [value]="religion">{{religion}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-select placeholder="Select Cast Category" aria-required="true" [(ngModel)]="model.castCategory" name="castCategory"
+            #castCategory="ngModel" required>
+            <mat-option>Select Cast Category</mat-option>
+            <mat-option *ngFor="let castCategoryVar of castCategoryList" [value]="castCategoryVar">{{castCategoryVar}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      </div>
+      <div class="buttonDiv">
+        <button mat-raised-button type="submit" [disabled]="castName.invalid||religionName.invalid||castCategory.invalid"
+          class="mat-subheading-2 center-align button-style">Add
+          Cast</button>
+      </div>
+    </form>
+  </div>
+
+  <div fxFlex class="table-component-holder mat-elevation-z4">
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter Cast">
+    </mat-form-field>
+
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource" matSort>
+
+        <!-- ID Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> <strong>Sr No.</strong> </th>
+          <td mat-cell *matCellDef="let row"> {{row.id}}. </td>
+        </ng-container>
+
+        <!-- Cast Name Column -->
+        <ng-container matColumnDef="castName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Cast Name</th>
+          <td mat-cell *matCellDef="let row"> {{row.castName}} </td>
+        </ng-container>
+
+        <!-- Cast Category Name Column -->
+        <ng-container matColumnDef="castCategory">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Cast Category Name </th>
+          <td mat-cell *matCellDef="let row"> {{row.castCategory}} </td>
+        </ng-container>
+
+        <!-- Religion Column -->
+        <ng-container matColumnDef="religionName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Religion </th>
+          <td mat-cell *matCellDef="let row"> {{row.religionName}} </td>
+        </ng-container>
+        
+        <!-- createDate Column -->
+        <ng-container matColumnDef="createDate">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Create/Update Date </th>
+          <td mat-cell *matCellDef="let row"> {{row.createDate | date: 'dd-MM-yyyy HH:mm:ss' }} </td>
+        </ng-container>
+
+        <!-- createBy Column -->
+        <ng-container matColumnDef="createBy">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Created By </th>
+          <td mat-cell *matCellDef="let row"> {{row.createBy}} </td>
+        </ng-container>
+
+        <!-- Edit column -->
+        <ng-container matColumnDef="edit">
+          <th mat-header-cell *matHeaderCellDef> Edit </th>
+          <td mat-cell *matCellDef="let row" (click)="openEditCastDialog(row)">
+            <mat-icon class="actionEdit">edit</mat-icon>
+          </td>
+        </ng-container>
+        <!-- Delete column -->
+        <ng-container matColumnDef="delete">
+          <th mat-header-cell *matHeaderCellDef> Delete </th>
+          <td mat-cell *matCellDef="let row" (click)="openDeleteCastDialog(row)">
+            <mat-icon class="actionDelete">delete_forever</mat-icon>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+        </tr>
+      </table>
+
+      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+    </div>
+  </div>
+</div>

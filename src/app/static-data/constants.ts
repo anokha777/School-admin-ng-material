@@ -46,6 +46,15 @@ export const msgDeleteSuccessReligion = 'Religion details deleted successfully.'
 export const msgDeleteErrorReligion = 'There is error while delete Religion details, please try after some time.';
 export const religionAlreadyExists = 'Either Religion name or code already exist, please try with different.';
 
+// Create Cast components message
+export const msgCreateSuccessCast = 'Cast added successfully!';
+export const msgCreateErrorCast = 'There is error while adding Cast, please try after some time.';
+export const msgUpdateSuccessCast = 'Cast details updated successfully.';
+export const msgUpdateErrorCast = 'There is error while update Cast details, please try after some time.';
+export const msgDeleteSuccessCast = 'Cast details deleted successfully.';
+export const msgDeleteErrorCast = 'There is error while delete Cast details, please try after some time.';
+export const castAlreadyExists = 'Cast name already exist, please try with different.';
+
 // Create Academic Year components message
 export const msgCreateSuccessAcademicYear = 'Academic Year added successfully!';
 export const msgCreateErrorAcademicYear = 'There is error while adding Academic Year, please try after some time.';
@@ -54,3 +63,13 @@ export const msgUpdateErrorAcademicYear = 'There is error while update Academic 
 export const msgDeleteSuccessAcademicYear = 'Academic Year details deleted successfully.';
 export const msgDeleteErrorAcademicYear = 'There is error while delete Academic Year details, please try after some time.';
 export const academicYearAlreadyExists = 'Either Academic Year name or code already exist, please try with different.';
+
+// Limit students in class section components message
+export const msgCreateSuccessLimitStudent = 'Limit Student added successfully!';
+export const msgCreateErrorLimitStudent = 'There is error while adding Limit Student , please try after some time.';
+export const msgUpdateSuccessLimitStudent = 'Limit Student details updated successfully.';
+export const msgUpdateErrorLimitStudent = 'There is error while update Limit Student  details, please try after some time.';
+export const msgDeleteSuccessLimitStudent = 'Limit Student details deleted successfully.';
+export const msgDeleteErrorLimitStudent = 'There is error while delete Limit Student details, please try after some time.';
+export const limitStudentAlreadyExists = 'Limit Student already exist, please try with different.';
+

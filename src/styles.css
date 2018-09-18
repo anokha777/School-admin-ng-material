@@ -3,6 +3,7 @@
 
 /* @import '~@angular/material/prebuilt-themes/indigo-pink.css'; */
 
+
 /* Edit and delete icon style start */
 .actionEdit:hover {
     cursor: pointer;
@@ -38,7 +39,9 @@
 	background-color: white;
 }
 .buttonDiv {
-	text-align:center;
+	text-align:right;
+	margin-right: 10px;
+	margin-bottom: 10px;
 }
 .button-style{
 	background-color: #77d3f0;

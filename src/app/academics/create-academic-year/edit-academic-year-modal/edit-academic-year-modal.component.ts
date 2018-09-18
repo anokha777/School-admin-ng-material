@@ -23,7 +23,7 @@ export class EditAcademicYearModalComponent implements OnInit {
   
   constructor(private fb: FormBuilder,
     private dialogRef: MatDialogRef<EditAcademicYearModalComponent>,
-    @Inject(MAT_DIALOG_DATA) data) { 
+    @Inject(MAT_DIALOG_DATA) data) {
       console.log('class data in modal component ====', data.row.name);
       this.id = data.row.id;
       this.academicMonthStart = data.row.academicMonthStart;

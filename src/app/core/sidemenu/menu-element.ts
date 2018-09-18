@@ -348,6 +348,12 @@ export const menus = [
                 'open': false,
             },
             {
+                'name': 'Create Cast',
+                'icon': 'accessibility_new',
+                'link': 'academics/create-cast',
+                'open': false,
+            },
+            {
                 'name': 'Class Subject Assign',
                 'icon': 'compare_arrows',
                 'link': 'academics/assign-class-subject',
@@ -372,7 +378,7 @@ export const menus = [
                 'open': false,
             },
             {
-                'name': 'View / Print Class Timetable',
+                'name': 'View/Print Class Timetable',
                 'icon': 'event_note',
                 'link': 'academics/view-class-timetable',
                 'open': false,
@@ -384,13 +390,13 @@ export const menus = [
                 'open': false,
             },
             {
-                'name': 'Create Circular / Notice / Information',
+                'name': 'Create Circular/Notice',
                 'icon': 'confirmation_number',
                 'link': 'academics/create-notice',
                 'open': false,
             },
             {
-                'name': 'Circular / Notice / Information-Search/Print',
+                'name': 'Print Circular/Notice',
                 'icon': 'print',
                 'link': 'academics/print-notice',
                 'open': false,
