@@ -24,7 +24,8 @@
 .mat-form-field{
 	padding-left:10px 0 10px 0;
 	display: block;
-	font-size: 14px;
+	font-size: 1rem;
+	font-family: cursive;
     width: 100%;
 }
 .container{
@@ -53,29 +54,19 @@ table {
     width: 100%;
   }
 
-/* Message display start */
-.isa_success {
-    color: #4F8A10;
-		background-color: #DFF2BF;
-		align-content: center;
-	}
+.mat-table {
+    font-family: cursive;
+}
 
-	.isa_error {
-    color: rgb(219, 44, 44);
-		background-color: rgb(241, 205, 176);
-		align-content: center;
-	}
+.mat-header-cell {
+	font-size: 1rem; 
+	font-weight: bolder;
+	background-color: #327ebd;
+	color: white;
+}
+.mat-sort-header-arrow {
+    color: white;
+}
 
-	.isa_success, .isa_error {
-		margin: 10px 0px;
-		padding:12px;
-	}
 
-	.isa_success i, .isa_error i {
-    margin:10px 22px;
-    font-size:2em;
-    vertical-align:middle;
-	}
-
-/* Message display end */
 

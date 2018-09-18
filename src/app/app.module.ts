@@ -25,10 +25,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 import { DeleteModalComponent } from './delete-modal/delete-modal.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-import { OnlyNumberDirective } from './academics/directives/only-number.directive';
-
-
-
 
 @NgModule({
   imports: [

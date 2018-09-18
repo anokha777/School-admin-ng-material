@@ -42,11 +42,11 @@ import { EditClassModalComponent } from './create-class/edit-class-modal/edit-cl
 import { EditSubjectModalComponent } from './create-subject/edit-subject-modal/edit-subject-modal.component';
 import { EditCategoryModalComponent } from './create-category/edit-category-modal/edit-category-modal.component';
 import { EditReligionModalComponent } from './create-religion/edit-religion-modal/edit-religion-modal.component';
-import { OnlyNumberDirective } from './directives/only-number.directive';
 import { EditAcademicYearModalComponent } from './create-academic-year/edit-academic-year-modal/edit-academic-year-modal.component';
 import { EditLimitStudentModalComponent } from './limit-students-in-section/edit-limit-student-modal/edit-limit-student-modal.component';
 import { CreateCastComponent } from './create-cast/create-cast.component';
 import { EditCastModalComponent } from './create-cast/edit-cast-modal/edit-cast-modal.component';
+import { OnlyNumberDirective } from '../directive/only-number.directive';
 
 
 @NgModule({

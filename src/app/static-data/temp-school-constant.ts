@@ -13,3 +13,7 @@ export const CastCategoryList = [
 export const ReligionList = [
     'Hindu', 'Mislim', 'Sikh', 'Christian', 'Jain'
 ];
+
+export const SubjectList = [
+    'Hindi', 'English', 'Social Science', 'Maths', 'Science', 'Computer'
+];
