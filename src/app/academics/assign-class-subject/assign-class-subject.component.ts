@@ -96,7 +96,7 @@ export class AssignClassSubjectComponent implements OnInit {
     console.log('this.classSubjectAssignForm=== ', this.classSubjectAssignForm.value);
     if (this.classSubjectAssignForm.valid) {
       // call REST API to check if class subject assign already exists in database and to save into database
-      if (this.classSubjectAssignUtil.checkClassSubjectAssigned(this.classSubjectAssignArray, this.classSubjectAssignForm.value.className)) { // Call a functio to ckeck if this subject assign already exits.
+      if (!this.classSubjectAssignUtil.checkClassSubjectAssigned(this.classSubjectAssignArray, this.classSubjectAssignForm.value.className)) { // Call a functio to ckeck if this subject assign already exits.
         // assuming this is now academic year to be added
         const newSubjectAssign: ClassSubjectAssignModule = new ClassSubjectAssignModule(this.classSubjectAssignArray.length + 1,
           this.classSubjectAssignForm.value.className, this.subject.value,

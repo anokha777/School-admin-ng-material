@@ -111,6 +111,7 @@ import { EditClassTeacherModalComponent } from './allocate-class-teacher/edit-cl
     EditAcademicYearModalComponent,
     EditLimitStudentModalComponent,
     EditCastModalComponent,
-    EditClassSubjectModalComponent ]
+    EditClassSubjectModalComponent,
+    EditClassTeacherModalComponent ]
 })
 export class AcademicsModule { }

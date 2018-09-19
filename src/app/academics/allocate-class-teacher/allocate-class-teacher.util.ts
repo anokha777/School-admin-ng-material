@@ -10,10 +10,11 @@ export class AllocateClassTeacherUtil {
 
   // find object by property from array of object - function for class teacher allocation 
   // (to check if teacher already assigned to any class.)
-  checkClassSubjectAssigned(arr: AllocateClassTeacherModule[], classTeacherName: string) {
+  checkClassTeacherAllocated(arr: AllocateClassTeacherModule[], classTeacherName: string, sectionName: string, className: string) {
     let objectExists: boolean = false;
     arr.filter(function (o) {
-      if(o.classTeacherName.toUpperCase() === classTeacherName.toUpperCase()){
+      if(o.classTeacherName.toUpperCase() === classTeacherName.toUpperCase() ||
+      (o.className.toUpperCase() === className.toUpperCase()) && (o.sectionName.toUpperCase() === sectionName.toUpperCase())){
         objectExists = true;
       }
     });

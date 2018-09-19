@@ -89,5 +89,5 @@ export const msgUpdateSuccessAllocateClassTeacher = 'Class teacher details updat
 export const msgUpdateErrorAllocateClassTeacher = 'There is error while update Class teacher details, please try after some time.';
 export const msgDeleteSuccessAllocateClassTeacher = 'Class teacher details deleted successfully.';
 export const msgDeleteErrorAllocateClassTeacher = 'There is error while delete Class teacher details, please try after some time.';
-export const classTeacherAlreadyExists = 'Teacher assigned to some other class, please try with different.';
+export const classTeacherAlreadyExists = 'Either Teacher assigned to some other class or Class already has teacher.';
 
