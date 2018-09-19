@@ -16,19 +16,14 @@
 					<tbody>
 						<tr *ngFor="let row of rows let i=index" >
 							<td [attr.data-label]="th.name" *ngFor="let th of helpers?.header" >
-
 								<span *ngIf="th.key!='action'">
-
 									{{row[th.key]}}
-
 									<mat-chip  (click)="findDuplicates(row)"
 									selected="true"
 									color="warn"  matTooltip="{{row['duplicate_applications'].length}} duplicate entries" matTooltipPosition="right" *ngIf="th.key=='applicationNumber' && row['duplicate_applications'] != 'undefined' && row['duplicate_applications'] && row['duplicate_applications'].length > 0" >
 									{{row['duplicate_applications'].length }}
 									</mat-chip>
-
 								</span>
-          
 							</td>
 							</tr>
 							<tr *ngIf="rows?.length==0 && status==false">

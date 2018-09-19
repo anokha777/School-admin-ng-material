@@ -47,6 +47,8 @@ import { EditLimitStudentModalComponent } from './limit-students-in-section/edit
 import { CreateCastComponent } from './create-cast/create-cast.component';
 import { EditCastModalComponent } from './create-cast/edit-cast-modal/edit-cast-modal.component';
 import { OnlyNumberDirective } from '../directive/only-number.directive';
+import { EditClassSubjectModalComponent } from './assign-class-subject/edit-class-subject-modal/edit-class-subject-modal.component';
+import { EditClassTeacherModalComponent } from './allocate-class-teacher/edit-class-teacher-modal/edit-class-teacher-modal.component';
 
 
 @NgModule({
@@ -94,8 +96,11 @@ import { OnlyNumberDirective } from '../directive/only-number.directive';
     EditAcademicYearModalComponent,
     EditLimitStudentModalComponent,
     EditCastModalComponent,
+    EditClassSubjectModalComponent,
     OnlyNumberDirective,
-    CreateCastComponent
+    CreateCastComponent,
+    EditClassSubjectModalComponent,
+    EditClassTeacherModalComponent
   ],
   entryComponents: [ 
     EditSectionModalComponent, 
@@ -105,6 +110,7 @@ import { OnlyNumberDirective } from '../directive/only-number.directive';
     EditReligionModalComponent,
     EditAcademicYearModalComponent,
     EditLimitStudentModalComponent,
-    EditCastModalComponent ]
+    EditCastModalComponent,
+    EditClassSubjectModalComponent ]
 })
 export class AcademicsModule { }

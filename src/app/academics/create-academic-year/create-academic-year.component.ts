@@ -75,15 +75,16 @@ export class CreateAcademicYearComponent implements OnInit {
     }
   }
 
-   // Add a new academic year
-   addAcademicYear() {
+  // Add a new academic year
+  addAcademicYear() {
     console.log('this.addAcademicYearForm=== ', this.addAcademicYearForm.value);
     if (this.addAcademicYearForm.valid) {
       // call REST API to check if academic year already exists in database and to save into database
-      if (false) { // assuming this is now academic year to be added
+      if (this.addAcademicYearForm.valid) { // Call a functio to ckeck if this academic year already exits.
+        // assuming this is now academic year to be added
         const newAcademicYear: AcademicYearModule = new AcademicYearModule(this.academicYearArray.length + 1,
           this.addAcademicYearForm.value.academicMonthStart, this.addAcademicYearForm.value.academicYearStart,
-          this.addAcademicYearForm.value.academicMonthEnd, this.addAcademicYearForm.value.academicYearEnd, 
+          this.addAcademicYearForm.value.academicMonthEnd, this.addAcademicYearForm.value.academicYearEnd,
           new Date(), new Date(), 'Anokha');
 
 
@@ -116,39 +117,39 @@ export class CreateAcademicYearComponent implements OnInit {
     }
   }
 
-    // Open modal to edit Academic year details
-    openEditAcademicYearDialog(row: AcademicYearModule) {
-      console.log('suject modal row===== ', row);
-      const dialogConfig = new MatDialogConfig();
-      dialogConfig.disableClose = true;
-      dialogConfig.autoFocus = false;
-      dialogConfig.data = {
-        row
-      };
-      const dialogRef = this.dialog.open(EditAcademicYearModalComponent, dialogConfig);
-      dialogRef.afterClosed().subscribe(
-        data => {
-          console.log("Dialog output:", data);
-          if (typeof data !== 'undefined') {
-            // Save this data (after return from modal edit) to database
-  
-  
-            // Open Snack-bar with a custom message if saved successfully 
-            this.snackBar.open(this.msgUpdateSuccessAcademicYear, '', {
-              duration: this.successMsgDispDuration,
-            });
-            // Open Snack-bar with a custom message if error occured while saving to database
-            this.snackBar.open('', this.msgUpdateErrorAcademicYear, {
-              duration: this.errorMsgDispDuration,
-            });
-          } else {
-            // Open Snack-bar with a custom message if user clicked on cancel button on edit modal
-            this.snackBar.open('', this.savedNoting, {
-              duration: this.errorMsgDispDuration,
-            });
-          }
+  // Open modal to edit Academic year details
+  openEditAcademicYearDialog(row: AcademicYearModule) {
+    console.log('suject modal row===== ', row);
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = false;
+    dialogConfig.data = {
+      row
+    };
+    const dialogRef = this.dialog.open(EditAcademicYearModalComponent, dialogConfig);
+    dialogRef.afterClosed().subscribe(
+      data => {
+        console.log("Dialog output:", data);
+        if (typeof data !== 'undefined') {
+          // Save this data (after return from modal edit) to database
+
+
+          // Open Snack-bar with a custom message if saved successfully 
+          this.snackBar.open(this.msgUpdateSuccessAcademicYear, '', {
+            duration: this.successMsgDispDuration,
+          });
+          // Open Snack-bar with a custom message if error occured while saving to database
+          this.snackBar.open('', this.msgUpdateErrorAcademicYear, {
+            duration: this.errorMsgDispDuration,
+          });
+        } else {
+          // Open Snack-bar with a custom message if user clicked on cancel button on edit modal
+          this.snackBar.open('', this.savedNoting, {
+            duration: this.errorMsgDispDuration,
+          });
         }
-      );
-    }
+      }
+    );
+  }
 
 }

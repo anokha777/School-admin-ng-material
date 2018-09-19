@@ -73,3 +73,21 @@ export const msgDeleteSuccessLimitStudent = 'Limit Student details deleted succe
 export const msgDeleteErrorLimitStudent = 'There is error while delete Limit Student details, please try after some time.';
 export const limitStudentAlreadyExists = 'Limit Student already exist, please try with different.';
 
+// Class Subject assign components message
+export const msgCreateSuccessClassSubAssign = 'Class Subject added successfully!';
+export const msgCreateErrorClassSubAssign = 'There is error while adding Class Subject , please try after some time.';
+export const msgUpdateSuccessClassSubAssign = 'Class Subject details updated successfully.';
+export const msgUpdateErrorClassSubAssign = 'There is error while update Class Subject  details, please try after some time.';
+export const msgDeleteSuccessClassSubAssign = 'Class Subject details deleted successfully.';
+export const msgDeleteErrorClassSubAssign = 'There is error while delete Class Subject details, please try after some time.';
+export const classSubjectAssignAlreadyExists = 'Class Subject already exist, please try with different.';
+
+// Class Subject assign components message
+export const msgCreateSuccessAllocateClassTeacher = 'Class teacher added successfully!';
+export const msgCreateErrorAllocateClassTeacher = 'There is error while adding Class teacher, please try after some time.';
+export const msgUpdateSuccessAllocateClassTeacher = 'Class teacher details updated successfully.';
+export const msgUpdateErrorAllocateClassTeacher = 'There is error while update Class teacher details, please try after some time.';
+export const msgDeleteSuccessAllocateClassTeacher = 'Class teacher details deleted successfully.';
+export const msgDeleteErrorAllocateClassTeacher = 'There is error while delete Class teacher details, please try after some time.';
+export const classTeacherAlreadyExists = 'Teacher assigned to some other class, please try with different.';
+

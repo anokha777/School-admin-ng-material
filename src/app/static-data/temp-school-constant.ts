@@ -17,3 +17,7 @@ export const ReligionList = [
 export const SubjectList = [
     'Hindi', 'English', 'Social Science', 'Maths', 'Science', 'Computer'
 ];
+
+export const TeachersList = [
+    'Hemant Pathak', 'Sanjay Pathak', 'Syam Sundar Singh', 'Sumant Pathak', 'Vinay', 'Shambhu Kumar', 'Ranjan Roy', 'Vikash', 'Ramesh', 'Mukesh', 'Reserved1', 'Reserver2'
+]; 

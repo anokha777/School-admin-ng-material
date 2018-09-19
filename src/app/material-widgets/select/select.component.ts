@@ -94,7 +94,7 @@ export class SelectComponent implements OnInit {
 
   topping = new FormControl();
 
-  toppingLists = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
+  toppingLists = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato','Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
   panelColor = new FormControl('red');
   constructor() { }
 

@@ -164,34 +164,34 @@ export const menus = [
     //                     }
     //                 ]
     // },
-    // {
-    //     'name': 'Tables',
-    //     'icon': 'list',
-    //     'link': false,
-    //     'open': false,
-    //     'chip': { 'value': 2, 'color': 'accent' },
-    //     'sub': [
-    //         {
-    //             'name': 'Fixed',
-    //             'icon': 'filter_list',
-    //             'link': 'tables/fixed',
-    //             'open': false,
-    //         },
-    //         {
-    //             'name': 'Feature',
-    //             'icon': 'done_all',
-    //             'link': 'tables/featured',
-    //             'open': false,
-    //         },
-    //         {
-    //             'name': 'Responsive Tables',
-    //             'icon': 'filter_center_focus',
-    //             'link': 'tables/responsive',
-    //             'open': false,
-    //         }
-    //     ]
+    {
+        'name': 'Tables',
+        'icon': 'list',
+        'link': false,
+        'open': false,
+        'chip': { 'value': 2, 'color': 'accent' },
+        'sub': [
+            {
+                'name': 'Fixed',
+                'icon': 'filter_list',
+                'link': 'tables/fixed',
+                'open': false,
+            },
+            {
+                'name': 'Feature',
+                'icon': 'done_all',
+                'link': 'tables/featured',
+                'open': false,
+            },
+            {
+                'name': 'Responsive Tables',
+                'icon': 'filter_center_focus',
+                'link': 'tables/responsive',
+                'open': false,
+            }
+        ]
 
-    // },
+    },
     // {
     //     'name': 'Guarded Routes',
     //     'icon': 'mode_edit',
