@@ -1,28 +1,31 @@
-<h2 mat-dialog-title>Update - {{ academicMonthStart }}-{{academicYearStart}} to {{academicMonthEnd}}-{{academicYearEnd}}</h2>
+<h2 mat-dialog-title>Update - {{ academicMonthStart }}-{{academicYearStart}} to
+  {{academicMonthEnd}}-{{academicYearEnd}}</h2>
 
 <mat-dialog-content [formGroup]="form">
   <mat-form-field>
-    <mat-select placeholder="Start month of Academic year" aria-required="true" 
-    name="academicMonthStart"  [value]="academicMonthStart" required>
+    <mat-select placeholder="Start month of Academic year" aria-required="true" name="academicMonthStart" [value]="academicMonthStart"
+      formControlName="academicMonthStart" required>
       <mat-option>Start month of Academic year</mat-option>
       <mat-option *ngFor="let month of fullMonthName" [value]="month">{{month}}</mat-option>
     </mat-select>
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput placeholder="Academic Start Year (YYYY)" value='{{ academicYearStart }}' formControlName="academicYearStart">
+    <input matInput placeholder="Academic Start Year (YYYY)" disabled="true" value='{{ academicYearStart }}' OnlyNumber="true"
+      minlength="4" maxlength="4">
   </mat-form-field>
 
   <mat-form-field>
-    <mat-select placeholder="End month of Academic year" aria-required="true" 
-    name="academicMonthEnd"  [value]="academicMonthEnd" required>
+    <mat-select placeholder="End month of Academic year" aria-required="true" name="academicMonthEnd" formControlName="academicMonthEnd"
+      [value]="academicMonthEnd" required>
       <mat-option>End month of Academic year</mat-option>
       <mat-option *ngFor="let month of fullMonthName" [value]="month">{{month}}</mat-option>
     </mat-select>
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput placeholder="Academic End Year (YYYY)" value='{{ academicYearEnd }}' formControlName="academicYearEnd">
+    <input matInput placeholder="Academic End Year (YYYY)" disabled value='{{ academicYearEnd }}' OnlyNumber="true"
+      minlength="4" maxlength="4">
   </mat-form-field>
 
 </mat-dialog-content>
@@ -34,4 +37,4 @@
   <button class="mat-raised-button mat-primary" (click)="save()">
     Save
   </button>
-</mat-dialog-actions> 
+</mat-dialog-actions>

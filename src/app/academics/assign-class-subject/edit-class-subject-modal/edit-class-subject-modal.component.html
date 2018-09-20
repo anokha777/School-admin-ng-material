@@ -2,7 +2,7 @@
 
 <mat-dialog-content [formGroup]="form">
   <mat-form-field>
-    <mat-select placeholder="Select Class" aria-required="true" name="className" [value]="className" required>
+    <mat-select placeholder="Select Class" aria-required="true" name="className" [value]="className" required disabled>
       <mat-option>Select Class</mat-option>
       <mat-option *ngFor="let classNameVar of classNameList" [value]="classNameVar">{{classNameVar}}</mat-option>
     </mat-select>

@@ -28,6 +28,7 @@
     "@angular/router": "^6.0.7",
     "@swimlane/ngx-charts": "^7.4.0",
     "angular-highlight-js": "^2.0.1",
+    "angular-material-time-picker": "^1.0.8",
     "angular-nvd3": "^1.0.9",
     "angular-svg-round-progressbar": "^2.0.0",
     "angular2-chartjs": "^0.4.1",

@@ -49,6 +49,7 @@ import { EditCastModalComponent } from './create-cast/edit-cast-modal/edit-cast-
 import { OnlyNumberDirective } from '../directive/only-number.directive';
 import { EditClassSubjectModalComponent } from './assign-class-subject/edit-class-subject-modal/edit-class-subject-modal.component';
 import { EditClassTeacherModalComponent } from './allocate-class-teacher/edit-class-teacher-modal/edit-class-teacher-modal.component';
+import { EditClassPeriodModalComponent } from './define-period/edit-class-period-modal/edit-class-period-modal.component';
 
 
 @NgModule({
@@ -100,7 +101,8 @@ import { EditClassTeacherModalComponent } from './allocate-class-teacher/edit-cl
     OnlyNumberDirective,
     CreateCastComponent,
     EditClassSubjectModalComponent,
-    EditClassTeacherModalComponent
+    EditClassTeacherModalComponent,
+    EditClassPeriodModalComponent
   ],
   entryComponents: [ 
     EditSectionModalComponent, 

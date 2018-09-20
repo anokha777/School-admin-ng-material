@@ -366,7 +366,7 @@ export const menus = [
                 'open': false,
             },
             {
-                'name': 'Define Period',
+                'name': 'Define Class Period',
                 'icon': 'explore',
                 'link': 'academics/define-period',
                 'open': false,

@@ -20,8 +20,8 @@ export class CreateAcademicYearComponent implements OnInit {
   msgUpdateSuccessAcademicYear: string = msgUpdateSuccessAcademicYear;
   msgUpdateErrorAcademicYear: string = msgUpdateErrorAcademicYear
   savedNoting: string = savedNoting;
-  msgDeleteSuccessCategory: string = msgDeleteSuccessAcademicYear;
-  msgDeleteErrorCategory: string = msgDeleteErrorAcademicYear;
+  msgDeleteSuccessAcademicYear: string = msgDeleteSuccessAcademicYear;
+  msgDeleteErrorAcademicYear: string = msgDeleteErrorAcademicYear;
   academicYearAlreadyExists: string = academicYearAlreadyExists;
   successMsgDispDuration: number = successMsgDispDuration;
   errorMsgDispDuration: number = errorMsgDispDuration;
