@@ -26,7 +26,7 @@ export class DefinePeriodComponent implements OnInit {
   model: ClassPeriodModule = new ClassPeriodModule(1, '', '', '', new Date(), new Date(), '');
   @ViewChild('addClassPeriodForm') addClassPeriodForm: NgForm;
 
-  // table starts 
+  // table starts
   displayedColumns: string[] = ['id', 'classPeriodName', 'classPeriodFrom', 'classPeriodTo', 'createDate', 'createBy', 'edit', 'delete'];
 
   dataSource: MatTableDataSource<ClassPeriodModule>;
@@ -72,6 +72,8 @@ export class DefinePeriodComponent implements OnInit {
     }
   }
 
-  
+  addClassPeriod () {}
+  openEditClassPeriodDialog() {}
+  openDeleteClassPeriodDialog() {}
 
 }

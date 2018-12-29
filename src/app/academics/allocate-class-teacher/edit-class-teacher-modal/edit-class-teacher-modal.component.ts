@@ -1,37 +1,3 @@
-<<<<<<< HEAD
-import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
-import { ClassNameList, SectionNameList, TeachersList } from '../../../static-data/temp-school-constant';
-
-@Component({
-  selector: 'app-edit-class-teacher-modal',
-  templateUrl: './edit-class-teacher-modal.component.html',
-  styleUrls: ['./edit-class-teacher-modal.component.scss']
-})
-export class EditClassTeacherModalComponent implements OnInit {
-  form: FormGroup;
-  id: number;
-  className: string;
-  subjectsName: string[];
-  createDate: Date;
-  updateDate: Date;
-  createBy: string;
-  classNameList: string[] = ClassNameList;
-  sectionNameList: string[] = SectionNameList;
-  teachersList: string[] = TeachersList;
-  subject: any;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-  close() {}
-
-  save() {}
-
-}
-=======
 import { Component, OnInit, Inject } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ClassNameList, SectionNameList, TeachersList } from '../../../static-data/temp-school-constant';
@@ -96,4 +62,3 @@ export class EditClassTeacherModalComponent implements OnInit {
 
 
 }
->>>>>>> 79483174963e406c9cb26699bf758b61d6d4ca98

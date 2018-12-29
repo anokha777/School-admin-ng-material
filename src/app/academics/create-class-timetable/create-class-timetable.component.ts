@@ -29,7 +29,7 @@ export class CreateClassTimetableComponent implements OnInit {
   model: CreateClassTimetableModule = new CreateClassTimetableModule(0, '', '', '', '', '', '', '', '', new Date(), new Date(), '');
   @ViewChild('classTimetableForm') classTimetableForm: NgForm;
 
-  // table starts 
+  // table starts
   displayedColumns: string[] = ['id', 'className', 'sectionName', 'subjectName', 'teacherName', 'teacherImgUrl', 'periodStartTime', 'periodEndTime', 'periodName', 'createDate', 'createBy', 'edit', 'delete'];
 
   dataSource: MatTableDataSource<CreateClassTimetableModule>;
@@ -42,5 +42,9 @@ export class CreateClassTimetableComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  addLimitStudentsInSection() {}
+  applyFilter (val: any) {}
+
 
 }
