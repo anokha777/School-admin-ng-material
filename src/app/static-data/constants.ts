@@ -91,3 +91,21 @@ export const msgDeleteSuccessAllocateClassTeacher = 'Class teacher details delet
 export const msgDeleteErrorAllocateClassTeacher = 'There is error while delete Class teacher details, please try after some time.';
 export const classTeacherAlreadyExists = 'Either Teacher assigned to some other class or Class already has teacher.';
 
+// Assign Class period components message
+export const msgCreateSuccessClassPeriod = 'Class period added successfully!';
+export const msgCreateErrorClassPeriod = 'There is error while adding Class period, please try after some time.';
+export const msgUpdateSuccessClassPeriod = 'Class period details updated successfully.';
+export const msgUpdateErrorClassPeriod = 'There is error while update Class period details, please try after some time.';
+export const msgDeleteSuccessClassPeriod = 'Class period details deleted successfully.';
+export const msgDeleteErrorClassPeriod = 'There is error while delete Class period details, please try after some time.';
+export const classPeriodAlreadyExists = 'Either (Class Period) name or (from time) or (to time) already exists.';
+
+// Class timetable components message
+export const msgCreateSuccessClassTimetable = 'Class timetable added successfully!';
+export const msgCreateErrorClassTimetable = 'There is error while adding Class timetable, please try after some time.';
+export const msgUpdateSuccessClassTimetable = 'Class timetable updated successfully.';
+export const msgUpdateErrorClassTimetable = 'There is error while update Class timetable, please try after some time.';
+export const msgDeleteSuccessClassTimetable = 'Class timetable deleted successfully.';
+export const msgDeleteErrorClassTimetable = 'There is error while delete Class timetable, please try after some time.';
+export const classTimetableAlreadyExists = 'Class timetable already exists.';
+

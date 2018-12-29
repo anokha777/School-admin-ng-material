@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h2 mat-dialog-title>Update Cast Detail for - {{ castName }}. </h2>
 
 <mat-dialog-content [formGroup]="form">
@@ -32,3 +33,37 @@
   </button>
 
 </mat-dialog-actions>
+=======
+<h2 mat-dialog-title>Update Cast Detail for - {{ castName }}. </h2>
+
+<mat-dialog-content [formGroup]="form">
+  <mat-form-field>
+    <input matInput value='{{ castName }}' required minlength="4" maxlength="50" placeholder="Cast Name" disabled>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select placeholder="Select Religion" aria-required="true" name="religionName" [value]="religionName"
+      formControlName="religionName" required>
+      <mat-option>Select Religion</mat-option>
+      <mat-option *ngFor="let religionNameVar of religionList" [value]="religionNameVar">{{religionNameVar}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select placeholder="Select Cast Category" aria-required="true" name="castCategory" [value]="castCategory"
+      formControlName="castCategory" required>
+      <mat-option>Select Cast Category</mat-option>
+      <mat-option *ngFor="let castCategoryVar of castCategoryList" [value]="castCategoryVar">{{castCategoryVar}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button class="mat-raised-button" (click)="close()">
+    Close
+  </button>
+  <button class="mat-raised-button mat-primary" (click)="save()" [disabled]="castCategory.invalid||castName.invalid||religionName.invalid">
+    Save
+  </button>
+
+
+</mat-dialog-actions>
+>>>>>>> 79483174963e406c9cb26699bf758b61d6d4ca98

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h2 mat-dialog-title>Update - {{ className }} subjects</h2>
 
 <mat-dialog-content [formGroup]="form">
@@ -32,3 +33,41 @@
     Save
   </button>
 </mat-dialog-actions>
+=======
+<h2 mat-dialog-title>Update - {{ className }} {{ sectionName }}</h2>
+
+<mat-dialog-content [formGroup]="form">
+  <mat-form-field>
+    <mat-select placeholder="Select Class" aria-required="true" name="className" [value]="className" required disabled>
+      <mat-option>Select Class</mat-option>
+      <mat-option *ngFor="let classNameVar of classNameList" [value]="classNameVar">{{classNameVar}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select placeholder="Select Section" aria-required="true" name="sectionName" [value]="sectionName" required
+      disabled>
+      <mat-option>Select Section</mat-option>
+      <mat-option *ngFor="let sectionNameVar of sectionNameList" [value]="sectionNameVar">{{sectionNameVar}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select placeholder="Select Class Teacher" aria-required="true" name="classTeacherName" [value]="classTeacherName" formControlName="classTeacherName" 
+      required>
+      <mat-option>Select Class Teacher</mat-option>
+      <mat-option *ngFor="let classTeacherNameVar of teachersList" [value]="classTeacherNameVar">{{classTeacherNameVar}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button class="mat-raised-button" (click)="close()">
+    Close
+  </button>
+  <button class="mat-raised-button mat-primary" (click)="save()">
+    Save
+  </button>
+</mat-dialog-actions>
+>>>>>>> 79483174963e406c9cb26699bf758b61d6d4ca98
