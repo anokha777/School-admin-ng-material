@@ -1,3 +1,34 @@
-<p>
-  edit-class-teacher-modal works!
-</p>
+<h2 mat-dialog-title>Update - {{ className }} subjects</h2>
+
+<mat-dialog-content [formGroup]="form">
+  <mat-form-field>
+    <mat-select placeholder="Select Class" aria-required="true" name="className" [value]="className" required>
+      <mat-option>Select Class</mat-option>
+      <mat-option *ngFor="let classNameVar of classNameList" [value]="classNameVar">{{classNameVar}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <!-- <mat-select placeholder="Select Subjects" aria-required="true" name="subject" [formControl]="subject"
+    [(ngModel)]="subjectsName" multiple required>
+      <mat-select-trigger>
+        {{subject.value ? subject.value[0] : ''}}
+        <span *ngIf="subject.value?.length > 1" class="example-additional-selection">
+          (+{{subject.value.length - 1}} others)
+        </span>
+      </mat-select-trigger>
+      <mat-option *ngFor="let subject of subjectList" [value]="subject">{{subject}}</mat-option>
+    </mat-select> -->
+  </mat-form-field>
+
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button class="mat-raised-button" (click)="close()">
+    Close
+  </button>
+  <button class="mat-raised-button mat-primary" (click)="save()">
+    Save
+  </button>
+</mat-dialog-actions>

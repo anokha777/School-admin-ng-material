@@ -92,7 +92,7 @@ export class CreateReligionComponent implements OnInit {
         this.putdataIntoDataSource(this.religionArray);
 
 
-        // Open Snack-bar with a custom message if saved successfully 
+        // Open Snack-bar with a custom message if saved successfully
         this.snackBar.open(this.msgCreateSuccessReligion, '', {
           duration: this.successMsgDispDuration,
         });
@@ -101,7 +101,7 @@ export class CreateReligionComponent implements OnInit {
           duration: this.errorMsgDispDuration,
         });
 
-        // to reset the class form 
+        // to reset the class form
         this.addReligionForm.reset();
       } else {
         // Open Snack-bar with a custom message if error occured while saving to database
@@ -134,7 +134,7 @@ export class CreateReligionComponent implements OnInit {
         if (typeof data !== 'undefined') {
           // Save this data (after return from modal edit) to database
 
-          // Open Snack-bar with a custom message if saved successfully 
+          // Open Snack-bar with a custom message if saved successfully
           this.snackBar.open(this.msgUpdateSuccessReligion, '', {
             duration: this.successMsgDispDuration,
           });
@@ -168,7 +168,7 @@ export class CreateReligionComponent implements OnInit {
         if (typeof data !== 'undefined') {
           // Delete this data (after return from modal delete) from database
 
-          // Open Snack-bar with a custom message if saved successfully 
+          // Open Snack-bar with a custom message if saved successfully
           this.snackBar.open(this.msgDeleteSuccessReligion, '', {
             duration: this.successMsgDispDuration,
           });
@@ -180,5 +180,7 @@ export class CreateReligionComponent implements OnInit {
       }
     );
   }
+
+  clearSuccessOrErrorMsg () {}
 
 }

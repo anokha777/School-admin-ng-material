@@ -1,19 +1,19 @@
 <div class="chat-inner-container">
   <mat-toolbar>
     <div class="toolbar" fxLayout="row" fxLayoutAlign="start center" fxFlexFill>
-          
+
           <button mat-icon-button (click)="onChatSideTriggered()">
             <mat-icon>menu</mat-icon>
           </button>
 
-     
+
         <img class="avatar pointer" *ngIf="activeChat" [src]="activeChat.picture">
 
         <div class="activeChat">
             <h3 class="mat-body-2" *ngIf="activeChat">{{ activeChat.name }}</h3>
             <p class="mat-body-1" style="margin: 0" *ngIf="activeChat">Online</p>
         </div>
-   
+
 
       <span fxFlex></span>
         <div fxLayout="row" fxLayoutAlign="end" >
@@ -40,13 +40,13 @@
         </div>
       </div>
     </perfect-scrollbar>
-    
+
   </div>
   <div class="chat-respond" fxLayout="row" fxLayoutAlign="start center">
-      <mat-input-container fxFlex>
+      <!-- <mat-input-container fxFlex>
         <textarea matInput (keyup.enter)="onSendTriggered()" [(ngModel)]="newMessage"
                   placeholder="Enter the message you want to send"></textarea>
-      </mat-input-container>
+      </mat-input-container> -->
       <button (click)="onSendTriggered()" mat-fab color="primary">
         <mat-icon>send</mat-icon>
       </button>

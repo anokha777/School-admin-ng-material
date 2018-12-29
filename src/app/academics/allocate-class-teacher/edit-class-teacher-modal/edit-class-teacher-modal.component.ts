@@ -8,7 +8,7 @@ import { ClassNameList, SectionNameList, TeachersList } from '../../../static-da
   styleUrls: ['./edit-class-teacher-modal.component.scss']
 })
 export class EditClassTeacherModalComponent implements OnInit {
-  form: FormGroup; 
+  form: FormGroup;
   id: number;
   className: string;
   subjectsName: string[];
@@ -18,10 +18,15 @@ export class EditClassTeacherModalComponent implements OnInit {
   classNameList: string[] = ClassNameList;
   sectionNameList: string[] = SectionNameList;
   teachersList: string[] = TeachersList;
-  
+  subject: any;
+
   constructor() { }
 
   ngOnInit() {
   }
+
+  close() {}
+
+  save() {}
 
 }
